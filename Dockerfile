@@ -4,9 +4,6 @@ RUN apk add --no-cache --virtual .gyp \
         python \
         make \
         g++ 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/
 
-RUN npm install @babel/cli @babel/core @babel/polyfill @babel/plugin-transform-object-assign 
-RUN npm install @babel/plugin-proposal-class-properties @babel/preset-env @babel/preset-react @babel/preset-flow @babel/runtime
-RUN npm install object-assign
-RUN npm install  pm2
+RUN npm install pm2 -g
